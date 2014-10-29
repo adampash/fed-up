@@ -34,6 +34,10 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
+      includes: {
+        files: ['app/html/*.html'],
+        tasks: ['includes']
+      },
       coffee: {
         files: ['<%= config.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['coffee:dist']
@@ -144,6 +148,15 @@ module.exports = function (grunt) {
           run: true,
           urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
         }
+      }
+    },
+
+    // Compiles index.html with includes
+    includes: {
+      dist: {
+        files: [
+          {src: ['app/html/index.html'], dest: 'app/index.html'},
+        ]
       }
     },
 
@@ -379,6 +392,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
+        'includes',
         'sass:server',
         'coffee:dist',
         'copy:styles'
@@ -457,4 +471,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-includes');
 };
