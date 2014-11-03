@@ -9,21 +9,28 @@
   .news-item
     height: 480px
     background: $light_green
-    padding: 30px 20px
+    padding: 30px 20px 30px
     margin-bottom: 20px
+    &.highlight
+      background-image: url(/images/news-bg.png)
+      background-repeat: no-repeat
+      background-position: bottom
 
     .org
-      height: 43px
+      height: 57px
+      line-height: 45px
+      color: white
+      overflow: hidden
 
     .story
-      height: 360px
+      height: 350px
       border-top: 9px solid white
     .bar
       background: white
       width: 100%
       height: 9px
 
-    .headline
+    .headline, .org
       font-size: 45px
 
     .more
@@ -34,6 +41,7 @@
     font-size: 45px
     margin: 0
     padding: 0
+    color: $light_green
 
 .sec-headlines
   margin: 0
@@ -47,6 +55,8 @@
       list-style: none
       padding: 0 20px 0 0
       border-bottom: 1px solid $light_green
+      overflow: hidden
+      text-overflow: ellipsis
       a
         line-height: $li_height
         width: 100%

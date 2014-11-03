@@ -30,8 +30,26 @@ section
       padding: 27px 30px 0
       margin: 0
 
-    ul.demand-bullets
-      li
+  ul.demand-bullets
+    li
+      $li_height: 50px
+      min-height: $li_height
+      margin-left: 26px
+      list-style-image: url(/images/bullet-image.png)
+      a
+        line-height: $li_height
 
 section#message1
   padding: $section_padding + $navbar_height 0 0
+  background-repeat: no-repeat
+  background: url(/images/bg.png) center
+
+section#message2
+  background: url(/images/bg2.png)
+  background-position: -212px 45px
+  background-position: center
+
+section#message3
+  background: url(/images/bg3.png) no-repeat center
+  background-position: -212px 45px
+  background-position: center

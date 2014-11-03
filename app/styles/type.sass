@@ -6,20 +6,23 @@
 
 body
   section
-    font-size: 24px
+    font-size: 22px
     font-family: Proxima Nova, Helvetica Neueu, Helvetica, Arial
-    color: $dark_text
+    color: $dark_green
 
 
     a
-      color: $dark_text
+      color: $dark_green
       &:hover
         text-decoration: none
 
-    h1, h2, h3, h4, h5
+    h1, h2, h3, h4, h5, .org
       font-family: vnr
       text-transform: uppercase
 
+@media (max-width: 768px)
+  section .section-header
+    font-size: 60px
 
 
 // @font-face
