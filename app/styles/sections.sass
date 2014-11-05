@@ -32,13 +32,15 @@ section
 
   ul.demand-bullets
     margin-top: 20px
+    $li_height: 50px
     li
-      $li_height: 50px
       min-height: $li_height
       margin-left: 26px
-      list-style-image: url(/images/bullet-image.png)
+      list-style: none
       a
         line-height: $li_height
+    li.highlight
+      list-style-image: url(/images/bullet-image.png)
 
 section#message1
   padding: $section_padding + $navbar_height 0 0
