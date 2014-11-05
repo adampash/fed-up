@@ -10,6 +10,7 @@ $(document).ready ->
   resize true, ->
     if !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent)
       skrollr.init
+        forceHeight: false
         render: (data) ->
 
 
