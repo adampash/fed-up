@@ -8,8 +8,8 @@ $(document).ready ->
 
   $(window).on 'resize', resize
   resize true, ->
-    # if !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent)
-      # skrollr.init
-      #   render: (data) ->
+    if !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent)
+      skrollr.init
+        render: (data) ->
 
 
