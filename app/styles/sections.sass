@@ -15,7 +15,9 @@ section
     font-size: 80px
     font-family: vnr
     padding-left: 0
-    margin-bottom: 25px
+    margin: 15px 0 20px 0
+    margin-bottom: 40px
+    line-height: 76px
 
     &.centered
       font-size: 70px
@@ -25,26 +27,31 @@ section
     padding: 0 0 27px
     background: $light_green
     color: $light_text
-    width: 750px
+    width: 620px
+    font-size: 19px
+    line-height: 24px
+    margin-bottom: 65px
 
     p
-      padding: 27px 30px 0
+      padding: 22px 30px 0
       margin: 0
 
   ul.demand-bullets
     margin-top: 20px
-    $li_height: 50px
+    $li_height: 35px
     li
       min-height: $li_height
       margin-left: 26px
       list-style: none
       a
         line-height: $li_height
+        &:hover
+          color: $light_green
     li.highlight
       list-style-image: url(/images/bullet-image.png)
 
 section#message1
-  padding: $section_padding + $navbar_height 0 0
+  padding: $section_padding 0 0
   background-repeat: repeat-x
   background-image: url(/images/bg.png)
   // background-position: center
