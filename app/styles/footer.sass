@@ -9,7 +9,11 @@ footer
     color: white
 
   .social-container
-    height: 150px
+    height: 125px
+
+    a
+      text-decoration: none
+      margin: 10px
 
   .social
     width: 50px
@@ -22,10 +26,26 @@ footer
   .footer-logo
     max-width: 100%
     width: 420px
-    height: 410px
+    // height: 410px
     // background: #ccc
     // margin-left: 17.666666%
     margin-bottom: 90px
 
   .license
     font-size: 12px
+    color: $light_green
+    a
+      color: $light_green
+
+  .twitter
+    background-image: url('/images/FU_twitter_normal.png')
+    background-repeat: no-repeat
+    &:hover
+      background-image: url('/images/FU_twitter_on.png')
+      background-repeat: no-repeat
+  .facebook
+    background-image: url('/images/FU_facebook_normal.png')
+    background-repeat: no-repeat
+    &:hover
+      background-image: url('/images/FU_facebook_on.png')
+      background-repeat: no-repeat
