@@ -1,6 +1,7 @@
 @import 'colors'
 
 footer
+
   background: $dark_green
   padding-bottom: 80px
 
@@ -9,11 +10,31 @@ footer
     color: white
 
   .social-container
-    height: 125px
+    height: 200px
+    border-top: 1px solid $light_green
+    border-bottom: 1px solid $light_green
+    margin-top: 45px
 
     a
       text-decoration: none
-      margin: 10px
+      margin: 5px
+
+  $top_margin: 60px
+  .social-buttons
+    height: 80px
+    width: 170px
+    border-left: 1px solid $light_green
+    border-right: 1px solid $light_green
+    margin-top: $top_margin
+    margin-left: 80px
+    padding: 22px 0
+
+  .hashtags
+    margin-top: $top_margin
+    margin-left: 70px
+    a
+      color: white
+      font-size: 17px
 
   .social
     width: 50px
@@ -25,7 +46,8 @@ footer
 
   .footer-logo
     max-width: 100%
-    width: 420px
+    margin-top: 27px
+    // width: 420px
     // height: 410px
     // background: #ccc
     // margin-left: 17.666666%
@@ -49,3 +71,6 @@ footer
     &:hover
       background-image: url('/images/FU_facebook_on.png')
       background-repeat: no-repeat
+
+  .end-matter
+    margin-top: -30px
