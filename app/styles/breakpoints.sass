@@ -1,3 +1,4 @@
+@import 'colors'
 @media (max-width: 1200px)
   // #news .news-item
   //   height: 500px
@@ -19,50 +20,75 @@
       padding: 20px
       font-size: 14px
   .sec-headlines ul li
-    margin: 35px 10px
+    margin: 25px 10px
     height: auto
-    list-style-type: disc
-    list-style: initial
-    line-height: auto
-    border: none
-    overflow: auto
+    // list-style-type: disc
+    // list-style: initial
+    // line-height: auto
+    // border: none
+    // overflow: auto
+    border-bottom: none
     a
-      line-height: 28px
+      line-height: 21px
   .submit-email
     width: 100%
-  .allies ul li 
-    margin: 15px 10px
-    padding: 10px 0
+  .allies ul li
+    margin: 1px 10px
+    padding: 7px 0
     a
       border: none
       text-align: center
+      height: auto
+      font-weight: bold
 
   #news
     h4
       margin: 0 10px
 
+  section
+    .bar
+      margin-bottom: 16px
+      margin-left: 10px
+
   section#message1, section#message2, section#message3, section#allies
     background-image: none
+    padding-top: 45px
 
   #news .news-item.highlight
     background-image: none
   section
-    .section-text
+    .section-text, .reg-text
+      padding-bottom: 0
+      margin-bottom: 13px
       max-width: 100%
-      font-size: 18px
-    .section-header
+      font-size: 16px
+      line-height: 21px
+      background: none
+      color: $dark_green
+      p
+        padding-left: 10px
+        padding-right: 10px
+    .section-header, .section-header.centered
       font-size: 40px
+      line-height: 40px
       margin: 0 10px
-    ul.demand-bullets
+    .section-header.centered
+      margin: 0 10px 22px
+    ul.demand-bullets, ul
       margin-top: 20px
       li
-        // font-size: 15px
+        font-size: 16px
+        line-height: 21px
         list-style: none
-        margin-bottom: 20px
+        margin-bottom: 9px
+        margin-left: 10px
         height: auto
+        &.highlight
+          list-style: none
         a
           line-height: 15px
           height: auto
+          border-bottom: 1px solid $light_green
   #news .news-item
     height: auto
     .story
@@ -71,9 +97,33 @@
   .input
     width: 100%
 
+  #email
+    padding-bottom: 40px
+    padding-top: 44px
+
   footer .footer-logo
     margin-left: 0
 
   #news
     .col-md-2
       padding: 0
+  #news, #allies
+    padding-bottom: 29px
+
+  footer
+    .social-container
+      border: none
+      height: auto
+      margin-top: 0
+      text-align: center
+      .footer-logo
+        margin: 10px 0
+    .social-buttons
+      border: none
+      margin: 10px auto
+    .hashtags
+      border: none
+      margin: 10px auto
+
+    .end-matter
+      margin-top: 50px

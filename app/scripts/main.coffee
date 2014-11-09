@@ -1,9 +1,15 @@
+isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent)
 $(document).ready ->
-  resize = (first=false, complete)->
+  resize = (first=false, complete)=>
     return unless window.scrollY is 0 or first is true
     newHeight = $(window).height() - $('.navbar').height()
-    $('#hero').height(Math.max(newHeight, 640))
-    $('.hero-logo').css('margin-top', Math.floor(newHeight/2) - 320)
+    if isMobile
+      $('#hero').height(newHeight)
+      # $('.hero-logo').css('margin-top', Math.max(Math.floor(newHeight/2) - 320), 100)
+    else
+      minHeight = 640
+      $('#hero').height(Math.max(newHeight, minHeight))
+      $('.hero-logo').css('margin-top', Math.max(Math.floor(newHeight/2) - 320), 40)
     complete() if complete?
 
   $(window).on 'resize', resize
